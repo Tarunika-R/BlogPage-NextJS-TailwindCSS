@@ -11,9 +11,9 @@ import "swiper/css/pagination";
 
 export default function Section1() {
   return (
-    <section className="py-15">
-      <div className="container mx-auto md:px-20">
-        <h1 className="font-semibold text-4xl pb-12 text-center">Trending</h1>
+    <section className="py-16">
+      <div className="container mx-auto px-4 md:px-20">
+        <h1 className="font-semibold text-3xl md:text-4xl pb-12 text-center">Trending</h1>
         <Slide />
       </div>
     </section>
@@ -63,20 +63,23 @@ function Slide() {
     >
       {slideData.map((slide) => (
         <SwiperSlide key={slide.id}>
-          <div className="grid md:grid-cols-2 gap-4">
-            <div className="image relative w-full h-[400px">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Image Container */}
+            <div className="image relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
               <Link href="/" legacyBehavior>
                 <a>
                   <Image
                     src={slide.image}
                     alt="Slide Image"
-                    width={600}
-                    height={600}
+                    layout="fill"
+                    objectFit="cover"
                   />
                 </a>
               </Link>
             </div>
-            <div className="info flex justify-center flex-col">
+
+            {/* Slide Information */}
+            <div className="info flex justify-center flex-col px-4 md:px-0">
               <div className="cat">
                 <Link href="/" legacyBehavior>
                   <a className="text-orange-600 hover:text-orange-800">
@@ -91,12 +94,14 @@ function Slide() {
               </div>
               <div className="title">
                 <Link href="/" legacyBehavior>
-                  <a className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600">
+                  <a className="text-2xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">
                     {slide.title}
                   </a>
                 </Link>
               </div>
-              <p className="text-gray-500 py-3">{slide.description}</p>
+              <p className="text-gray-500 py-3 text-sm md:text-base">
+                {slide.description}
+              </p>
               <Author />
             </div>
           </div>
