@@ -9,15 +9,15 @@ export default function Header() {
                 <input type="text" className="input-text" placeholder="Search..." />
             </div>
             <div className="shrink w-80 sm:order-2">
-                <Link href="/" legacyBehavior>
+                <Link href="/#" legacyBehavior>
                     <a className="font-bold uppercase text-3xl ">Design</a>
                 </Link>
             </div>
             <div className="w-96 order-3 flex justify-center">
                 <div className="flex gap-6">
-                    <Link href="/" legacyBehavior><a><ImFacebook color="#888888"/></a></Link>
-                    <Link href="/" legacyBehavior><a><ImTwitter color="#888888"/></a></Link>
-                    <Link href="/" legacyBehavior><a><ImYoutube color="#888888"/></a></Link>
+                    <Link href="/#" legacyBehavior><a><ImFacebook color="#888888"/></a></Link>
+                    <Link href="/#" legacyBehavior><a><ImTwitter color="#888888"/></a></Link>
+                    <Link href="/#" legacyBehavior><a><ImYoutube color="#888888"/></a></Link>
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-'use client'; 
+'use client';
 
 import Image from "next/image";
 import Link from "next/link";
@@ -24,16 +24,17 @@ function Slide() {
   const slideData = [
     {
       id: 1,
+      slug: "your-unhappy-customers",
       image: "/images/image1.jpg",
       category: "Business, Travel",
       date: "July 3, 2022",
-      title:
-        "Your most unhappy customers are your greatest source of learning",
+      title: "Your most unhappy customers are your greatest source of learning",
       description:
         "Even the all-powerful Pointing has no control about the blind texts. It is an almost unorthographic life. One day, however, a small line of blind text decided to leave for the World of Grammar.",
     },
     {
       id: 2,
+      slug: "modern-world-technology",
       image: "/images/image2.jpg",
       category: "Technology, Innovation",
       date: "July 10, 2022",
@@ -43,6 +44,7 @@ function Slide() {
     },
     {
       id: 3,
+      slug: "healthy-lifestyle-steps",
       image: "/images/image3.jpg",
       category: "Lifestyle, Health",
       date: "July 15, 2022",
@@ -66,7 +68,7 @@ function Slide() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Image Container */}
             <div className="image relative w-full h-[300px] sm:h-[400px] md:h-[500px]">
-              <Link href="/" legacyBehavior>
+              <Link href={`/blogs/${slide.slug}`} legacyBehavior>
                 <a>
                   <Image
                     src={slide.image}
@@ -81,19 +83,15 @@ function Slide() {
             {/* Slide Information */}
             <div className="info flex justify-center flex-col px-4 md:px-0">
               <div className="cat">
-                <Link href="/" legacyBehavior>
+                <Link href={`/blogs/${slide.slug}`} legacyBehavior>
                   <a className="text-orange-600 hover:text-orange-800">
                     {slide.category}
                   </a>
                 </Link>
-                <Link href="/" legacyBehavior>
-                  <a className="text-gray-800 hover:text-gray-600">
-                    - {slide.date}
-                  </a>
-                </Link>
+                <span className="text-gray-800"> - {slide.date}</span>
               </div>
               <div className="title">
-                <Link href="/" legacyBehavior>
+                <Link href={`/blogs/${slide.slug}`} legacyBehavior>
                   <a className="text-2xl md:text-4xl font-bold text-gray-800 hover:text-gray-600">
                     {slide.title}
                   </a>
