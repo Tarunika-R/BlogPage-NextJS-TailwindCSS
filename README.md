@@ -39,3 +39,23 @@ A modern and dynamic blog application built with **Next.js**. This project inclu
 
 5. Open your browser and visit: ```http://localhost:3000```
 
+## Repository Structure
+The repository is structured as follows:
+```bash
+src/
+├── app/
+│   ├── blogs/[slug]/         # Dynamic blog pages
+│   ├── layout.js             # Root layout component
+│   └── page.js               # Homepage with trending slider
+├── components/
+│   ├── _child/               # Child components (e.g., Author)
+│   ├── Footer.jsx            # Footer section
+│   ├── Header.jsx            # Header section
+│   ├── Layout.jsx            # Reusable layout component
+│   └── Section1.jsx          # Trending slider section
+├── public/images/            # Image assets for the application
+├── styles/
+│   └── globals.css           # Global CSS styles
+```
+
+## ScreenShots:
